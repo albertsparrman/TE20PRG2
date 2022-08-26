@@ -13,7 +13,5 @@ public class jurgerburger {
             }
         }
         System.out.println(str);
-
-
     }
 }
