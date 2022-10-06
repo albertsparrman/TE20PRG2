@@ -1,11 +1,27 @@
+import java.sql.Struct;
+import java.util.Scanner;
+
 public class krypto {
     public static void main(String[] args) {
-        int a = 6527;
-        System.out.println(Integer.toBinaryString(a));
-        int key = 3405;
-        System.out.println(Integer.toBinaryString(key));
-        int krypto = a^key;
-        System.out.println(Integer.toBinaryString(krypto));
-        System.out.println(Integer.toBinaryString(krypto^key));
+        Scanner myObj = new Scanner(System.in);
+        long a = Integer.parseInt(myObj.nextLine());
+        String key = "3405";
+        String copy = key;
+
+        String b = Long.toString(a);
+        int c = b.length();
+        System.out.println(c);
+
+        int e = key.length();
+        System.out.println(e);
+
+        if (e < c){
+            key += copy;
+        }
+        long key2 = Long.parseLong(key);
+        System.out.println(key2);
+        long krypto = a^key2;
+        System.out.println(krypto);
+        System.out.println(krypto^key2);
     }
 }

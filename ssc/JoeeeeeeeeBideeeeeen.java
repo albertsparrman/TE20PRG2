@@ -1,24 +1,30 @@
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class JoeeeeeeeeBideeeeeen {
         public static void main(String[] args) {
-            String data2 = null;
-            String data = null;
+            String data2 = "";
+            String data = "";
+            int bingus = 1;
             try {
                 File myObj = new File("ssc/filename.txt");
                 Scanner myReader = new Scanner(myObj);
                 while (myReader.hasNextLine()) {
-                    data = myReader.nextLine();
-                    System.out.println(data);
+                    if(bingus == 1) {
+                        data += myReader.nextLine();
+                    }
+                    else {
+                        data += " //" + myReader.nextLine();
+                    }
+                    bingus += 1;
                 }
 
                 File myKey = new File("ssc/key.txt");
                 Scanner myReader2 = new Scanner(myKey);
                 while (myReader2.hasNextLine()) {
                     data2 = myReader2.nextLine();
-                    System.out.println(data2);
                 }
                 myReader.close();
             } catch (FileNotFoundException e) {
@@ -43,20 +49,17 @@ public class JoeeeeeeeeBideeeeeen {
 
             int strlength = str.length() + spaceCount;
 
-            System.out.println(strlength);
 
-            System.out.println(str);
+
             for (int e = dinmor; e < strlength; e += dinmor) {
                 key += copy;
             }
-            System.out.println(key.length());
             for (int i = 0; i < str.length(); i++) {
                 char ke = key.charAt(i);
                 char ch = str.charAt(i);
                 char beans = (char) (ch ^ ke);
                 array[i] = beans;
             }
-            System.out.println(array);
 
             for (int i = 0; i < str.length(); i++) {
                 char ke = key.charAt(i);
@@ -64,6 +67,9 @@ public class JoeeeeeeeeBideeeeeen {
                 char frid = (char) (be ^ ke);
                 arr[i] = frid;
             }
+            System.out.println(data);
+            System.out.println(data2);
+            System.out.println(array);
             System.out.println(arr);
 
         }
